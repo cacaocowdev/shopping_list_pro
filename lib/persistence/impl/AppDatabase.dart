@@ -12,8 +12,8 @@ class AppDatabase {
   Future<Database> getDatabase() async {
     if (_dbInstance == null) {
       Sqflite.devSetDebugModeOn(true);
-      final path = await getApplicationDocumentsDirectory()
-          .then((dir) => dir.path + _DATABASE_FILE);
+      final path = await getDatabasesPath()
+          .then((dir) => dir + _DATABASE_FILE);
       _dbInstance = await openDatabase(
         path,
         version: _VERSION,
