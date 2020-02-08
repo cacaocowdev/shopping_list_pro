@@ -60,19 +60,19 @@ class ViewStoreModel {
           INNER JOIN ${StoreItem.TABLE_NAME} p
           ON i.${Item.COLUMN_ID} = p.${Item.COLUMN_ID}
           INNER JOIN (
-            SELECT i_i.${Item.COLUMN_ID} as ${Item.COLUMN_ID}, MIN(p_i.${StoreItem.COLUMN_ITEM_PRICE}) as $BEST_PRICE  FROM ${Item.TABLE_NAME} i_i
+            SELECT i_i.${Item.COLUMN_ID} as ${Item.COLUMN_ID}, MIN(p_i.${StoreItem.COLUMN_ITEM_PRICE}) as $BEST_PRICE
+            FROM ${Item.TABLE_NAME} i_i
             INNER JOIN ${StoreItem.TABLE_NAME} p_i
             ON i_i.${Item.COLUMN_ID} = p_i.${Item.COLUMN_ID}
             GROUP BY p_i.${Item.COLUMN_ID}
             ) as e
           ON i.${Item.COLUMN_ID} = e.${Item.COLUMN_ID}
           INNER JOIN ${StoreItem.TABLE_NAME} p2
-          ON p2.${StoreItem.COLUMN_ITEM_PRICE} = e.$BEST_PRICE
+          ON p2.${StoreItem.COLUMN_ITEM_PRICE} = e.$BEST_PRICE AND p2.${Item.COLUMN_ID} = e.${Item.COLUMN_ID}
           INNER JOIN ${Store.TABLE_NAME} s
           ON p2.${Store.COLUMN_ID} = s.${Store.COLUMN_ID}
           WHERE l.${ShoppingList.COLUMN_ID} = ? -- change for other shopping list
           AND p.${Store.COLUMN_ID} = ? -- change for other shop
-          GROUP BY i.${Item.COLUMN_ID}
       ''';
       arguments.add(store.id);
     }
