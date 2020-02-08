@@ -4,10 +4,10 @@ This app aims to provide a lot of features to ease the task of shopping. To acco
 users, the app should be highly configurable, presenting itself as a simple app and allowing the
 user to activate the features he needs.
 
-![Item View](https://raw.githubusercontent.com/cacaocowdev/shopping_list_pro/example/misc/example/slp_item_view.png)
-![Shopping List View](https://raw.githubusercontent.com/cacaocowdev/shopping_list_pro/example/misc/example/slp_list_view.png)
-![Shopping List View: Cart](https://raw.githubusercontent.com/cacaocowdev/shopping_list_pro/example/misc/example/slp_list_view_cart.png)
-![Store View](https://raw.githubusercontent.com/cacaocowdev/shopping_list_pro/example/misc/example/slp_store_view.png)
+![Item View](https://raw.githubusercontent.com/cacaocowdev/shopping_list_pro/master/misc/example/slp_item_view.png)
+![Shopping List View](https://raw.githubusercontent.com/cacaocowdev/shopping_list_pro/master/misc/example/slp_list_view.png)
+![Shopping List View: Cart](https://raw.githubusercontent.com/cacaocowdev/shopping_list_pro/master/misc/example/slp_list_view_cart.png)
+![Store View](https://raw.githubusercontent.com/cacaocowdev/shopping_list_pro/master/misc/example/slp_store_view.png)
 
 # Current Features
 
