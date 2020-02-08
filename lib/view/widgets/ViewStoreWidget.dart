@@ -35,7 +35,7 @@ class _ViewStoreState extends State<ViewStoreWidget> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Store'),
+        title: Text('Store: ${store.name}'),
       ),
       body: ListView.builder(
         itemCount: vItems.length,
