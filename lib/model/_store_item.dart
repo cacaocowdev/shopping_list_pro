@@ -2,7 +2,7 @@ import 'model.dart';
 
 class StoreItem {
 
-  static const TABLE_NAME = 'ShopItem';
+  static const TABLE_NAME = 'StoreItem';
   static const COLUMN_ITEM_PRICE = 'item_price';
 
   int storeId;

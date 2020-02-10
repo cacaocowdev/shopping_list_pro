@@ -2,9 +2,9 @@ import 'package:shopping_list_pro/util/Mappable.dart';
 
 class Store extends Mappable {
 
-  static const TABLE_NAME = 'Shop';
-  static const COLUMN_ID = 'shop_id';
-  static const COLUMN_NAME = 'shop_name';
+  static const TABLE_NAME = 'Store';
+  static const COLUMN_ID = 'store_id';
+  static const COLUMN_NAME = 'store_name';
 
   int id;
   String name;
