@@ -44,7 +44,7 @@ class _ItemListState extends State<ItemListWidget> {
               if (created) {
                 _refreshItems();
                 Scaffold.of(ctx).showSnackBar(
-                    SnackBar(content: Text("Item erstellt")));
+                    SnackBar(content: Text("Created item")));
               }
             }),
             child: Icon(Icons.add),
@@ -58,7 +58,7 @@ class _ItemListState extends State<ItemListWidget> {
         onDismissed: (direction) {
           if (item != null) {
             repo.delete(item.id).then((_) => _refreshItems());
-            Scaffold.of(context).showSnackBar(SnackBar(content: Text('Eintrag gelöscht')));
+            Scaffold.of(context).showSnackBar(SnackBar(content: Text('Deleted item')));
           }
         },
         child: ListTile(

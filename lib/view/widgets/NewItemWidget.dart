@@ -73,7 +73,7 @@ class _NewItemState extends State<NewItemWidget> {
       TextFormField(
         decoration: InputDecoration(labelText: 'Name')
             .applyDefaults(Theme.of(context).inputDecorationTheme),
-        validator: (value) => value.isEmpty ? 'Name missing' : null,
+        validator: (value) => value.isEmpty ? 'Enter name' : null,
         onSaved: (value) => _item.name = value,
         initialValue: _item.name,
       )

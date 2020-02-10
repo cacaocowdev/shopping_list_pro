@@ -85,7 +85,7 @@ class InputDialogState extends State<InputDialog> {
     body.add(ButtonBar(
       children: <Widget>[
         FlatButton(
-          child: Text('Abbrechen'),
+          child: Text('Cancel'),
           onPressed: () => Navigator.pop(context),
         ),
         FlatButton(

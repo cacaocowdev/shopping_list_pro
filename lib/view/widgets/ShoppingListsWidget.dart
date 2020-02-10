@@ -49,7 +49,7 @@ class _ShoppingListsState extends State<ShoppingListsWidget> with WidgetsBinding
                     repo.create(list)
                         .then((_) => _refreshLists());
                     Scaffold.of(ctx)
-                        .showSnackBar(SnackBar(content: Text('Create list')));
+                        .showSnackBar(SnackBar(content: Text('Created list')));
                   }
                 }),
               )),
