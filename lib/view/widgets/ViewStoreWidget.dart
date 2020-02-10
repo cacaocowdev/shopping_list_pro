@@ -61,7 +61,7 @@ class _ViewStoreState extends State<ViewStoreWidget> {
 
   String _fmt(int price) {
     var cents = price % 100;
-    return '${(price / 100).floor()} ${(cents < 10 ? ',0':',')}$cents €';
+    return '${(price / 100).floor()}${(cents < 10 ? '.0':'.')}$cents €';
   }
 
   _refresh(int store) {

@@ -47,8 +47,7 @@ class _NewItemState extends State<NewItemWidget> {
             stores.map((store) => new _MetaShopItem(
                 store: this.stores.singleWhere((s) =>
                 s.id == store.storeId),
-                price: (store.price ~/ 100).toString() + ',' +
-                    (store.price % 100).toString())
+                price: _fmt(store.price))
             ).toList()).then((list) => this.setState(() => this.selectedDropDowns = list));
       }
     }
@@ -225,6 +224,11 @@ class _NewItemState extends State<NewItemWidget> {
 
   Future<void> _getShops() {
     return _storeRepo.listAll().then((storeList) => this.setState(() => stores = storeList));
+  }
+
+  String _fmt(int price) {
+    var cents = price % 100;
+    return '${(price / 100).floor()}${(cents < 10 ? '.0':'.')}$cents';
   }
 }
 
