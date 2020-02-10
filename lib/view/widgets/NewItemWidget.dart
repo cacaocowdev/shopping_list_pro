@@ -219,7 +219,7 @@ class _NewItemState extends State<NewItemWidget> {
       placeOfComma = price.length - 1;
     }
     var exponent = 2 - (price.length - placeOfComma - 1);
-    return int.tryParse(rawPrice)??0 * (pow(10,exponent));
+    return (int.tryParse(rawPrice)??0) * (pow(10,exponent));
   }
 
   Future<void> _getShops() {
