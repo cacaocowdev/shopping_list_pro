@@ -19,7 +19,7 @@ import 'package:shopping_list_pro/view/widgets/ViewStoreWidget.dart';
 
 void main() {
   setUpDependencies();
-  runApp(MyApp(Injector.getInjector()));
+  runApp(ShoppingListPro(Injector.getInjector()));
 }
 
 /// Registers all interdependencies with the dependency injector.
@@ -31,12 +31,12 @@ void setUpDependencies() {
   injector.map<StoreRepository>((i) => SqliteStoreRepository(i.get()), isSingleton: true);
 }
 
-class MyApp extends StatelessWidget {
+class ShoppingListPro extends StatelessWidget {
   // This widget is the root of your application.
 
   final Injector injector;
 
-  MyApp(this.injector);
+  ShoppingListPro(this.injector);
 
   @override
   Widget build(BuildContext context) {
