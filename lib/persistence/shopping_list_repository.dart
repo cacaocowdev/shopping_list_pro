@@ -13,4 +13,6 @@ abstract class ShoppingListRepository extends CrudRepository<int, ShoppingList> 
   Future<Optional<List<ShoppingListItem>>> listItems(ShoppingList list);
 
   Future<Optional<ShoppingListItem>> setInCart(ShoppingListItem item, bool isInCart);
+
+  Future<Optional<List<ShoppingListMetadata>>> getListMetadata({int id, int limit});
 }

@@ -56,7 +56,7 @@ class ShoppingListPro extends StatelessWidget {
       ),
 
       routes: {
-        '/': (context) => HomeWidget(),
+        '/': (context) => HomeWidget(injector.get()),
         '/items': (context) => ItemListWidget(injector.get()),
         '/create-item': (context) => NewItemWidget(injector.get(), injector.get(), false),
         '/edit-item': (context) => NewItemWidget(injector.get(), injector.get(), true),
